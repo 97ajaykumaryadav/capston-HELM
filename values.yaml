@@ -12,7 +12,7 @@ ui:
   ingress:
     host: dev-ui.ajay-azuredevops.shop
 
-getTask:
+backend_Task:
   replicas: 2
   image:
     name: capston-backend-image

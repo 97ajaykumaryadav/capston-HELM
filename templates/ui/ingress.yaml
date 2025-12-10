@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: {{ .Release.Name }}-capston-ui-ingress
+  name: {{ .Release.Name }}-todo-ui-ingress
 spec:
   ingressClassName: {{ .Values.common.ingressClass }}
   rules:
@@ -13,6 +13,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: {{ .Release.Name }}-capston-ui-svc
+            name: {{ .Release.Name }}-todo-ui-svc
             port: 
               number: {{ .Values.ui.port }}
