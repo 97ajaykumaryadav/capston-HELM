@@ -1,3 +1,4 @@
+{{- if .Values.addTask }}
 # apiVersion: apps/v1
 # kind: Deployment
 # metadata:
@@ -20,3 +21,4 @@
 #         env: 
 #         - name: CONNECTION_STRING
 #           value: "{{ .Values.addTask.connectionString }}"      
+{{- end }}

@@ -1,3 +1,4 @@
+{{- if .Values.addTask }}
 # apiVersion: v1
 # kind: Service
 # metadata:
@@ -9,3 +10,4 @@
 #   ports:
 #     - port: {{ .Values.addTask.ServicePort }}
 #       targetPort: {{ .Values.addTask.port }}
+{{- end }}

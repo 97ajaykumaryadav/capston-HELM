@@ -1,3 +1,4 @@
+{{- if .Values.addTask }}
 # apiVersion: networking.k8s.io/v1
 # kind: Ingress
 # metadata:
@@ -15,3 +16,4 @@
 #                 name: {{ .Release.Name }}-todo-add-tasks-api
 #                 port:
 #                   number: {{ .Values.addTask.ServicePort }}
+{{- end }}
