@@ -14,7 +14,7 @@ ui:
     host: dev-ui.ajay-azuredevops.shop
     ingressClass: azure-application-gateway
 
-backend-Task:
+backend_Task:
   replicas: 2
   image:
     name: capston-backend-image
