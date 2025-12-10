@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}-capston-todo-get-task-api
 spec:
-  replicas: {{ .Values.getTask.replicas }}
+  replicas: {{ .Values.backend_Task.replicas }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-capston-todo-get-task-api
@@ -16,7 +16,7 @@ spec:
       - name: {{ .Release.Name }}-capston-todo-get-task-api
         image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.getTask.image.name }}:{{ .Values.getTask.image.tag }}"
         ports:
-        - containerPort: {{ .Values.getTask.port }}
+        - containerPort: {{ .Values.backend_Task.port }}
         env: 
         - name: CONNECTION_STRING
           value: "{{ .Values.getTask.connectionString }}"
